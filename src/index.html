@@ -209,12 +209,39 @@
     //   template: '<div>bar</div>'
     // }
 
+    const rootPath = {
+      template: `
+        <div>
+          <h4>Pizza, hier dreht sich alles um Pizza!</h4>
+          <ul>
+            <li>
+              <p>
+                Wieviel kostet deine Pizza pro Quadratmeter?
+                <br>
+                <router-link to="/durchmesser">Durchmesser</router-link>
+              </p>
+            </li>
+            <li>
+              <p>
+                Nie wieder rätseln, um satt zu werden! Wieviel Pizza brauchst du, um satt zu werden?
+                <br>
+                <router-link to="/vergleich">Vergleich</router-link>
+              </p>
+            </li>
+          </ul>
+        </div>
+      `
+    }
+
     // 2. Define some routes
     // Each route should map to a component. The "component" can
     // either be an actual component constructor created via
     // Vue.extend(), or just a component options object.
     // We'll talk about nested routes later.
     const routes = [{
+        path: '/',
+        component: rootPath
+      }, {
         path: '/durchmesser',
         component: PizzaSquareMeterCalculator
       },
