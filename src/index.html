@@ -37,6 +37,8 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
   </div>
 
   <script type="text/javascript">
@@ -98,39 +100,37 @@
     let PizzaComparisonResult = {
       props: ['pizzas'],
       template: `
-        <div>
-          <h4>Ergebnis</h4>
-
-          <div>
+        <div class="card">
+          <div class="card-body">
+            <h4>Ergebnis</h4>
             {{priceDiff(pizzas)}}
           </div>
         </div>
       `,
       methods: {
-        whichPizzas: function (pizzas) {
+        whichPizzas: function(pizzas) {
           let largePizza = pizzas[0]
           let smallPizza = pizzas[1]
           let largePizzaArea = largePizza.area()
           let smallPizzaArea = smallPizza.area()
           if (largePizzaArea >= 2 * smallPizzaArea) {
             return largePizza
-          }
-          else {
+          } else {
             return smallPizza
           }
         },
-        priceDiff: function (pizzas) {
+        priceDiff: function(pizzas) {
           let largePizza = pizzas[0]
           let smallPizza = pizzas[1]
           if (this.whichPizzas(pizzas) == largePizza) {
             let priceDiff = largePizza.price - smallPizza.price
-            return '1 große Pizza kostet ' + largePizza.price + ' € und du bekommst ' + this.percDiff(largePizza.area(), 2 *  smallPizza.area()) + ' % mehr.'
+            return '1 große Pizza kostet ' + largePizza.price + ' € und du bekommst ' + this.percDiff(largePizza.area(), 2 * smallPizza.area()) + ' % mehr.'
           } else {
             let priceDiff = 2 * smallPizza.price - largePizza.price
             return '2 kleine Pizzen kosten ' + priceDiff + ' € mehr, dafür bekommst du ' + this.percDiff(2 * smallPizza.area(), largePizza.area()) + ' % mehr.'
           }
         },
-        percDiff: function (highVal, lowVal) {
+        percDiff: function(highVal, lowVal) {
           return parseInt((highVal - lowVal) / lowVal * 100)
         }
       }
@@ -139,21 +139,17 @@
     let PizzaComparator = {
       template: `
         <div>
-          <h2>2 kleine oder 1 große Pizza?</h2>
+          <h2>1 große oder 2 kleine Pizzen?</h2>
           <div v-for="(pizza, index) in pizzas">
             <div v-if="index == 0">
-              <h4>Große Pizza</h4>
+              <h4>große Pizza</h4>
             </div>
             <div v-else>
-              <h4>2 kleine Pizzen</h4>
+              <h4>kleine Pizza</h4>
             </div>
 
             <pizza-calculator-form v-bind:pizza="pizza">
             </pizza-calculator-form>
-            <div>
-              Bonus: <pizza-relative-price v-bind:pizza="pizza">
-              </pizza-relative-price>
-            </div>
             <br>
           </div>
 
