@@ -1,0 +1,12 @@
+{
+  "name": "vue-pizza-pi",
+  "version": "1.0.0",
+  "description": "calculate what pizza to order",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Neutert",
+  "license": "MIT"
+}
