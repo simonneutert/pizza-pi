@@ -4,7 +4,7 @@
   "description": "calculate what pizza to order",
   "main": "index.js",
   "scripts": {
-    "build": "npm build",
+    "build": "cp src/index.html public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Simon Neutert",
