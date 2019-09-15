@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <h4>Pizza, hier dreht sich alles um Pizza!</h4>
+    <ul>
+      <li>
+        <p>
+          Wieviel kostet deine Pizza pro Quadratmeter?
+          <br />
+          <router-link to="/durchmesser">Durchmesser</router-link>
+        </p>
+      </li>
+      <li>
+        <p>
+          Nie wieder rätseln, um satt zu werden! Wieviel Pizza brauchst du, um
+          satt zu werden?
+          <br />
+          <router-link to="/vergleich">Vergleich</router-link>
+        </p>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "home",
-  components: {
-    HelloWorld
-  }
+  name: "home"
 };
 </script>
