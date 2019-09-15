@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/squaremeterofpizza">Square Meter Price</router-link> |
+      <router-link to="/1or2pizzas">Best Bang for my Bucks</router-link>
     </div>
     <router-view />
   </div>

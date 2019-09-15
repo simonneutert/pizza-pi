@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>1 große oder 2 kleine Pizzen?</h2>
+    <h2>1 large or 2 small pizzas?</h2>
 
     <pizza-comparison-result v-bind:pizzas="pizzas"></pizza-comparison-result>
 
@@ -8,10 +8,10 @@
 
     <div v-bind:key="index" v-for="(pizza, index) in pizzas">
       <div v-if="index == 0">
-        <h4>große Pizza</h4>
+        <h4>large Pizza</h4>
       </div>
       <div v-else>
-        <h4>kleine Pizza</h4>
+        <h4>small Pizza</h4>
       </div>
 
       <pizza-calculator-form v-bind:pizza="pizza"></pizza-calculator-form>
@@ -32,8 +32,7 @@ export default {
   },
   data: function() {
     return {
-      pizzas: [new Pizza(34, 10), new Pizza(24, 5)],
-      selectedMenu: "zum Pizzavergleicher"
+      pizzas: [new Pizza(34, 10), new Pizza(24, 5)]
     };
   },
   methods: {

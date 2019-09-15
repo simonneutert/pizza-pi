@@ -1,25 +1,33 @@
 <template>
-  <div>
-    <form>
-      <div class="form-group">
-        <label for="diameter">Durchmesser</label>
-        <input class="form-control"
-          v-model="pizza.diameter"
-          placeholder="Größe in cm">
+  <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="diameter">Diameter</label>
+          <input
+            class="form-control"
+            v-model="pizza.diameter"
+            placeholder="Größe in cm"
+          />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="Preis">Preis</label>
-        <input class="form-control"
-          v-model="pizza.price"
-          placeholder="Preis in Euro">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Preis">Price</label>
+          <input
+            class="form-control"
+            v-model="pizza.price"
+            placeholder="Price in Euro"
+          />
+        </div>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: "pizza-calculator-form",
-  props: ['pizza']
+  props: ["pizza"]
 };
 </script>

@@ -1,14 +1,25 @@
 <template>
-  <div>
-    <div 
-      class="" 
-      v-if="this.pizza.relativePriceSquareMeter() != 'unberechenbare'">
-      {{this.pizza.relativePriceSquareMeter()}} €/m² / {{parseInt(this.pizza.area()) + ' cm²'}}
-    </div>
-    <div class="" v-else>
-      <small>
-        Das kann ich nicht berechnen, bitte überprüfe deine Eingaben.
-      </small>
+  <div class="card">
+    <div class="card-body">
+      <h4>Result</h4>
+      <div
+        class=""
+        v-if="this.pizza.relativePriceSquareMeter() != 'uncalculable'"
+      >
+        <p>
+          <strong>relative price:</strong>
+          {{ this.pizza.relativePriceSquareMeter() }} €/m²
+        </p>
+        <p>
+          <strong>square centimeter delivered:</strong>
+          {{ parseInt(this.pizza.area()) + " cm²" }}
+        </p>
+      </div>
+      <div class="" v-else>
+        <small>
+          Please check your inputs, please.
+        </small>
+      </div>
     </div>
   </div>
 </template>

@@ -17,7 +17,7 @@ export default class Pizza {
       pizzaPrice == "" ||
       isNaN(pizzaPrice)
     ) {
-      return "unberechenbare";
+      return "uncalculable";
     } else {
       let factor = 1 / (area / 10000);
       let result = (factor * this.price).toFixed(2);

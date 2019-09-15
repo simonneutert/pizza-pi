@@ -24,13 +24,13 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/durchmesser",
-      name: "durchmesser",
+      path: "/squaremeterofpizza",
+      name: "squaremeterofpizza",
       component: PizzaSquareMeterCalculator
     },
     {
-      path: "/vergleich",
-      name: "vergleich",
+      path: "/1or2pizzas",
+      name: "oneortwopizzas",
       component: PizzaComparator
     }
   ]
