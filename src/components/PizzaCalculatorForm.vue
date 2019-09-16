@@ -3,21 +3,21 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="diameter">Diameter</label>
+          <label for="pizza.diameter">Diameter in cm</label>
           <input
             class="form-control"
             v-model="pizza.diameter"
-            placeholder="Größe in cm"
+            placeholder="diameter in cm"
           />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="Preis">Price</label>
+          <label for="pizza.price">Price in Euro</label>
           <input
             class="form-control"
             v-model="pizza.price"
-            placeholder="Price in Euro"
+            placeholder="price in Euro"
           />
         </div>
       </div>
