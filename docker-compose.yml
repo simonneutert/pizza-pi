@@ -11,9 +11,9 @@ services:
     labels:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
-      - "traefik.hitchi.frontend.rule=Host:pizza-pi.simon-neutert.de"
-      - "traefik.hitchi.port=8080"
-      - "traefik.hitchi.protocol=http"
+      - "traefik.pizzapi.frontend.rule=Host:pizza-pi.simon-neutert.de"
+      - "traefik.pizzapi.port=80"
+      - "traefik.pizzapi.protocol=http"
 
 networks:
   web:
