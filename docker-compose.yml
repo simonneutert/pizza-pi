@@ -8,8 +8,8 @@ services:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
       - "traefik.hitchi.frontend.rule=Host:pizza-pi.simon-neutert.de"
-      - "traefik.hitchi.port=443"
-      - "traefik.hitchi.protocol=https"
+      - "traefik.hitchi.port=80"
+      - "traefik.hitchi.protocol=http"
 
 networks:
   web:
