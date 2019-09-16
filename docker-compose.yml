@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "8080:80"
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.hitchi.frontend.rule=Host:pizza-pi.simon-neutert.de"
+      - "traefik.hitchi.port=443"
+      - "traefik.hitchi.protocol=https"
+
+networks:
+  web:
+    external: true
