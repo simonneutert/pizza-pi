@@ -4,6 +4,10 @@ services:
     build: .
     ports:
     - "8080:80"
+    restart: unless-stopped
+    networks:
+      - web
+      - default
     labels:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
