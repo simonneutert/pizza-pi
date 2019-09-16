@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-    - "8080:80"
+    - "1337:1337"
     restart: unless-stopped
     networks:
       - web
@@ -12,7 +12,7 @@ services:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
       - "traefik.pizzapi.frontend.rule=Host:pizza-pi.simon-neutert.de"
-      - "traefik.pizzapi.port=80"
+      - "traefik.pizzapi.port=1337"
       - "traefik.pizzapi.protocol=http"
 
 networks:
