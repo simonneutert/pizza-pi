@@ -1,10 +1,14 @@
-FROM node:10
+FROM node:10 AS build
 COPY . /app
 WORKDIR /app
 RUN npm install -g yarn
-RUN yarn install && yarn build
+COPY yarn.lock .
+COPY package.json .
+RUN yarn install 
+
+RUN yarn build
 
 FROM nginx
 RUN mkdir /app
-COPY --from=0 /app/dist /app
+COPY --from=build /app/dist /app
 COPY nginx.conf /etc/nginx/nginx.conf
