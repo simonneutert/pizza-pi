@@ -1,4 +1,5 @@
 FROM node:10 AS build
+WORKDIR /app
 
 RUN npm install -g yarn
 
@@ -7,7 +8,6 @@ COPY package.json .
 RUN yarn install 
 
 COPY . /app
-WORKDIR /app
 RUN yarn build
 
 FROM nginx
