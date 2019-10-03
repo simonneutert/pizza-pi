@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Pizza! But just how much pizza do I need?!</h4>
+    <h4>Pizza, I need pizza! But just how much pizza do I need?!</h4>
   </div>
 </template>
 
