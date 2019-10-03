@@ -32,7 +32,7 @@ export default {
   },
   data: function() {
     return {
-      pizzas: [new Pizza(34, 10), new Pizza(24, 5)]
+      pizzas: [new Pizza(34, 10), new Pizza(26, 5.5)]
     };
   },
   methods: {
