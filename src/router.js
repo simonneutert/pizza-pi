@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "@/views/Home.vue";
 
 import PizzaSquareMeterCalculator from "./views/PizzaSquareMeterCalculator.vue";
+import PizzaSquareMeterCalculatorSquared from "./views/PizzaSquareMeterCalculatorSquared.vue";
 import PizzaComparator from "./views/PizzaComparator.vue";
 
 Vue.use(Router);
@@ -27,6 +28,11 @@ export default new Router({
       path: "/squaremeterofpizza",
       name: "squaremeterofpizza",
       component: PizzaSquareMeterCalculator
+    },
+    {
+      path: "/squaremeterofpizzasquared",
+      name: "squaremeterofpizzasquared",
+      component: PizzaSquareMeterCalculatorSquared
     },
     {
       path: "/1or2pizzas",

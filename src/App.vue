@@ -1,9 +1,28 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/squaremeterofpizza">Square Meter Price</router-link> |
-      <router-link to="/1or2pizzas">Best Bang for my Bucks</router-link>
+      <div class="row">
+        <div class="col-sm-12 col-md-3">
+          <router-link to="/">
+            Home
+          </router-link>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <router-link to="/squaremeterofpizza">
+            Square Meter Price
+          </router-link>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <router-link to="/squaremeterofpizzasquared">
+            Square Meter Price Squared Pizza
+          </router-link>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <router-link to="/1or2pizzas">
+            Best Bang for my Bucks
+          </router-link>
+        </div>
+      </div>
     </div>
     <router-view />
   </div>
@@ -18,8 +37,11 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  padding-bottom: 0.5cm;
+  margin-bottom: 0.5cm;
+  border-bottom: 1px solid green;
   a {
+    line-height: 2em;
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
