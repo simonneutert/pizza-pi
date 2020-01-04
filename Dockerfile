@@ -1,7 +1,7 @@
 FROM node:10 AS build
 WORKDIR /app
 
-RUN npm install -g yarn
+# RUN npm install -g yarn # yarn was already installed
 
 COPY yarn.lock .
 COPY package.json .
