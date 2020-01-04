@@ -8,6 +8,8 @@ COPY package.json .
 RUN yarn install 
 
 COPY . /app
+RUN rm -rf dist
+RUN rm -rf node_modules
 RUN yarn build
 
 FROM nginx
