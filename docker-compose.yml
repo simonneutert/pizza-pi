@@ -12,17 +12,17 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
 
-      - "traefik.http.routers.robotcityguide_website.entrypoints=web"
-      - "traefik.http.routers.robotcityguide_website.rule=Host(`www.robotcityguide.de`)"
-      - "traefik.http.routers.robotcityguide_website.middlewares=https_redirect"
+      - "traefik.http.routers.pizzapi.entrypoints=web"
+      - "traefik.http.routers.pizzapi.rule=Host(`pizza-pi.simon-neutert.de`)"
+      - "traefik.http.routers.pizzapi.middlewares=https_redirect"
       - "traefik.http.middlewares.https_redirect.redirectscheme.scheme=https"
       
-      - "traefik.http.routers.robotcityguide_website_https.entrypoints=websecure"
-      - "traefik.http.routers.robotcityguide_website_https.rule=Host(`www.robotcityguide.de`)"
+      - "traefik.http.routers.pizzapi_https.entrypoints=websecure"
+      - "traefik.http.routers.pizzapi_https.rule=Host(`pizza-pi.simon-neutert.de`)"
       
-      - "traefik.http.routers.robotcityguide_website_https.tls.certresolver=myhttpchallenge"
-      - "traefik.http.services.robotcityguide_website.loadbalancer.server.port=80"
-      - "trarfik.http.services.robotcityguide_website.loadbalancer.server.port=443"
+      - "traefik.http.routers.pizzapi_https.tls.certresolver=myhttpchallenge"
+      - "traefik.http.services.pizzapi.loadbalancer.server.port=80"
+      - "trarfik.http.services.pizzapi.loadbalancer.server.port=443"
 
 networks:
   web:
