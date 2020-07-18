@@ -1,4 +1,4 @@
-FROM node:10 AS build
+FROM node:12 AS build
 WORKDIR /app
 
 # RUN npm install -g yarn # yarn was already installed
